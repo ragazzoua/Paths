@@ -1,6 +1,7 @@
 package com.company;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.IOException;
 import java.nio.channels.FileChannel;
 import java.nio.file.FileSystems;
@@ -27,6 +28,18 @@ public class Main {
         System.out.println("**************************");
         filePath = Paths.get(".");
         System.out.println(filePath.toAbsolutePath());
+        Path path3 = FileSystems.getDefault().getPath("thisfiledoesntexist.txt");
+        System.out.println(path3.toAbsolutePath());
+
+        Path path4 = Paths.get("/Users/s.a.miroshnychenko/IdeaProjects/","Oasasa.txt");
+        System.out.println(path4.toAbsolutePath());
+
+        filePath = FileSystems.getDefault().getPath("files");
+        System.out.println("Exist = "  + Files.exists(filePath));
+
+
+        System.out.println("Exist = "  + Files.exists(path4));
+
     }
 
     private static void printFile(Path path) {
