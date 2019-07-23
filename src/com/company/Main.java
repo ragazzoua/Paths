@@ -22,6 +22,9 @@ public class Main {
         System.out.println("__________________________");
         filePath = Paths.get("C:\\Users\\s.a.miroshnychenko\\IdeaProjects\\OutThere.txt");
         printFile(filePath);
+        System.out.println("**************************");
+        filePath = Paths.get(".");
+        System.out.println(filePath.toAbsolutePath());
     }
 
     private static void printFile(Path path) {
