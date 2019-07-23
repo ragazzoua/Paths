@@ -6,6 +6,7 @@ import java.nio.channels.FileChannel;
 import java.nio.file.FileSystems;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 
 public class Main {
 
@@ -14,6 +15,12 @@ public class Main {
         printFile(path);
         Path filePath = FileSystems.getDefault().getPath("files", "SubdirectoryFile.txt");
         System.out.println("__________________________");
+        printFile(filePath);
+        filePath = Paths.get("/Users/s.a.miroshnychenko/IdeaProjects/OutThere.txt");
+        System.out.println("__________________________");
+        printFile(filePath);
+        System.out.println("__________________________");
+        filePath = Paths.get("C:\\Users\\s.a.miroshnychenko\\IdeaProjects\\OutThere.txt");
         printFile(filePath);
     }
 
