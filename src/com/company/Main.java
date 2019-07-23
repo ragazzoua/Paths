@@ -13,6 +13,7 @@ public class Main {
     public static void main(String[] args) {
         Path path = FileSystems.getDefault().getPath("WorkingDirectoryFile.txt");
         printFile(path);
+        System.out.println("**************************");
 //        Path filePath = FileSystems.getDefault().getPath("files", "SubdirectoryFile.txt");
         Path filePath = Paths.get(".","files", "SubdirectoryFile.txt");
         System.out.println("__________________________");
