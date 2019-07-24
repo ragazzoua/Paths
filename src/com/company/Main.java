@@ -9,7 +9,7 @@ public class Main {
 
         try {
             Path fileToDelete = FileSystems.getDefault().getPath("Examples", "Dir1", "file1copy.txt");
-            Files.delete(fileToDelete);
+            Files.deleteIfExists(fileToDelete);
 
 
 //            Path fileToMove = FileSystems.getDefault().getPath("Examples", "file2.txt");
