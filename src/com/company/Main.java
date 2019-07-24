@@ -13,6 +13,7 @@ public class Main {
                 return (Files.isRegularFile(path));
             }
         };
+        DirectoryStream.Filter<Path> filter1 = path -> (Files.isRegularFile(path));
 
         Path directory = FileSystems.getDefault().getPath("FileTree/Dir2");
         try (DirectoryStream<Path> contents = Files.newDirectoryStream(directory, filter)) {
