@@ -10,10 +10,14 @@ public class Main {
     public static void main(String[] args) {
 
         try {
+            Path dirToCreate = FileSystems.getDefault().getPath("Examples", "Dir2/Dir3/Dir4/Dir5/Dir6");
+            Files.createDirectories(dirToCreate);
+
+
 //            Path fileToCreate = FileSystems.getDefault().getPath("Examples", "file2.txt");
 //            Files.createFile(fileToCreate);
-            Path dirToCreate = FileSystems.getDefault().getPath("Examples", "Dir4");
-            Files.createDirectory(dirToCreate);
+//            Path dirToCreate = FileSystems.getDefault().getPath("Examples", "Dir4");
+//            Files.createDirectory(dirToCreate);
 
 //            Path fileToDelete = FileSystems.getDefault().getPath("Examples", "Dir1", "file1copy.txt");
 //            Files.deleteIfExists(fileToDelete);
