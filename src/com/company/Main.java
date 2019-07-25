@@ -40,9 +40,15 @@ public class Main {
         }
 
         Iterable<FileStore> stores = FileSystems.getDefault().getFileStores();
-        for (FileStore store: stores){
+        for (FileStore store : stores) {
             System.out.println(store);
             System.out.println(store.name());
         }
+
+        Iterable<Path> rootPath = FileSystems.getDefault().getRootDirectories();
+        for (Path path : rootPath) {
+            System.out.println("Root directories " + path);
+        }
+
     }
 }
