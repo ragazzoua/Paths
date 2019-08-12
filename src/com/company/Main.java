@@ -65,5 +65,39 @@ public class Main {
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
+
+        File file = new File("/Examples/file.txt");
+        Path converterPath = file.toPath();
+        System.out.println("converted path " + converterPath);
+
+        File parent = new File("/Examples");
+        File resolvedFile = new File(parent, "dir/file.txt");
+
+        System.out.println(resolvedFile.toPath());
+
+        resolvedFile = new File("/Examples", "dir/file.txt");
+        System.out.println(resolvedFile.toPath());
+
+        Path parentPath = Paths.get("/Examples");
+        Path childRelativePath = Paths.get("dir/file.txt");
+        System.out.println(parentPath.resolve(childRelativePath));
+
+        File workingDirectory = new File("").getAbsoluteFile();
+        System.out.println("working directory " + workingDirectory.getAbsolutePath());
+
+        System.out.println("--- print Dir2 contents using list ");
+        File dir2File = new File(workingDirectory, "FileTree/Dir2");
+
+        String[] dir2Contents = dir2File.list();
+        for (int i = 0; i < dir2Contents.length; i++) {
+            System.out.println("i= " + i + " : " + dir2Contents[i]);
+        }
+
+        System.out.println("--- print Dir2 contents using listFiles() ");
+        File[] dir2files = dir2File.listFiles();
+        for (int i = 0; i < dir2files.length; i++) {
+
+            System.out.println("i= " + i + " : " + dir2files[i].getName());
+        }
     }
 }
